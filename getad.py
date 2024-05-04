@@ -286,8 +286,8 @@ def main():
         exe_path = ".\\updater\\updater.exe"
         working_directory = ".\\updater\\"  # меняем рабочий каталог
         subprocess.Popen(exe_path, cwd=working_directory)
-    except Exception:
-        None
+    except Exception as e:
+        log_with_timestamp(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
